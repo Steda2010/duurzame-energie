@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="nl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Duurzame energie</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <header class="header">
+            <div class="dropdown" id="dropdownContainer">
+                <button class="dropbtn" aria-expanded="false" aria-controls="myDropdown" type="button">Dropdown</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <ul class="table_of_contents" id="white">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#wat-is-duurzame-energie">Wat is duurzame energie?</a></li>
+                        <li><a href="#energie-soorten">Energie soorten</a></li>
+                        <li>
+                            <ul>
+                                <li><a href="#zonne">Zonne-energie</a></li>
+                                <li><a href="#wind">Windenergie</a></li>
+                                <li><a href="#water">Waterenergie</a></li>
+                                <li><a href="#biomassa">Biomassa</a></li>
+                                <li><a href="#geothermisch">Geothermische energie</a></li>
+                                <li><a href="#getijden">Getijdenenergie</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="search-container">
+                <form action="#" method="get">
+                    <input type="text" placeholder="Search.." name="search" autocomplete="off" required>
+                    <button type="submit">search</button>
+                </form>
+            </div>
+        </header>
+
+        <main>
+            <div id="home">
+                <h1 class="title">Duurzame energie</h1>
+            </div>
+
+            <div class="pretitle">
+                <ul class="table_of_contents">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#wat-is-duurzame-energie">Wat is duurzame energie?</a></li>
+                    <li><a href="#energie-soorten">Energie soorten</a></li>
+                    <li>
+                        <ul>
+                            <li><a href="#zonne">Zonne-energie</a></li>
+                            <li><a href="#wind">Windenergie</a></li>
+                            <li><a href="#water">Waterenergie</a></li>
+                            <li><a href="#biomassa">Biomassa</a></li>
+                            <li><a href="#geothermisch">Geothermische energie</a></li>
+                            <li><a href="#getijden">Getijdenenergie</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <section id="wat-is-duurzame-energie">
+                <h1 class="title">Wat is duurzame energie?</h1>
+                <p class="text">Duurzame energie is energie die wordt opgewekt uit natuurlijke bronnen die niet opraken of die op een verantwoorde manier kunnen worden hernieuwd. Voorbeelden van duurzame energiebronnen zijn zonne-energie, windenergie, waterkracht, biomassa en geothermische energie. Het gebruik van duurzame energie helpt om de uitstoot van broeikasgassen te verminderen en draagt bij aan een schonere en gezondere leefomgeving.</p>
+            </section>
+
+            <section class="information" id="energie-soorten">
+                <h1 class="title">Energie soorten</h1>
+                <p class="text">Energie kan op verschillende manieren worden opgewekt. Hieronder vind je een overzicht van de meest voorkomende soorten duurzame energie.</p>
+                <ul class="energy">
+                    <li id="zonne">
+                        <h2>Zonne-energie</h2>
+                        <p class="zonne">Zonne-energie is energie die wordt opgewekt uit de zon. Dit kan door middel van zonnepanelen of zonnecollectoren.</p>
+                    </li>
+                    <li id="wind">
+                        <h2>Windenergie</h2>
+                        <p>Windenergie is energie die wordt opgewekt uit de wind. Dit kan door middel van windturbines die de beweging van de lucht omzetten in elektriciteit.</p>
+                    </li>
+                    <li id="water">
+                        <h2>Waterenergie</h2>
+                        <p>Waterenergie is energie die wordt opgewekt uit de beweging van water. Dit kan door middel van waterturbines die de stroom van rivieren of zeeën omzetten in elektriciteit.</p>
+                    </li>
+                    <li id="biomassa">
+                        <h2>Biomassa</h2>
+                        <p>Biomassa is energie die wordt opgewekt uit organische stoffen zoals hout, graan, en afval. Deze energie kan worden verbrand of omgezet in biogas.</p>
+                    </li>
+                    <li id="geothermisch">
+                        <h2>Geothermische energie</h2>
+                        <p>Geothermische energie is energie die wordt opgewekt uit de warmte van de aarde. Dit kan door middel van geothermische systemen die de warmte uit de grond halen.</p>
+                    </li>
+                    <li id="getijden">
+                        <h2>Getijdenenergie</h2>
+                        <p>Getijdenenergie is energie die wordt opgewekt uit de getijden. Dit kan door middel van getijdenkrachtcentrales die de beweging van het water omzetten in elektriciteit.</p>
+                    </li>
+                </ul>
+            </section>
+        </main>
+
+        <script>
+            const dropdownButton = document.querySelector('.dropbtn');
+            const dropdownContent = document.getElementById('myDropdown');
+
+            dropdownButton.addEventListener('click', function () {
+                const isOpen = dropdownContent.classList.contains('show');
+                dropdownContent.classList.toggle('show', !isOpen);
+                dropdownButton.setAttribute('aria-expanded', String(!isOpen));
+            });
+
+            document.addEventListener('click', function (event) {
+                if (!event.target.closest('.dropdown')) {
+                    dropdownContent.classList.remove('show');
+                    dropdownButton.setAttribute('aria-expanded', 'false');
+                }
+            });
+        </script>
+    </body>
+</html>
