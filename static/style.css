@@ -131,7 +131,7 @@ main {
 }
 
 .dropbtn {
-    background: linear-gradient(135deg, #0d3b32, #1d5d48);
+    background: linear-gradient(135deg, #0d223b, #1d2e5d);
     color: white;
     box-shadow: 0 8px 18px rgba(6, 27, 40, 0.3);
 }
