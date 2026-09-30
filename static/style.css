@@ -1,12 +1,12 @@
 :root {
     --bg-color: #07130f;
-    --panel-color: rgba(13, 24, 29, 0.82);
-    --panel-border: rgba(126, 255, 255, 0.24);
+    --panel-color: rgba(3, 30, 52, 0.82);
+    --panel-border: rgba(126, 218, 255, 0.24);
     --green: #1bfeae;
     --aqua: #1bd1fe;
     --text: #ecfff9;
     --muted: #c9efe2;
-    --shadow: rgba(19, 197, 144, 0.35);
+    --shadow: rgba(19, 156, 197, 0.35);
 }
 
 * {
