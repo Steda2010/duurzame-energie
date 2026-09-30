@@ -15,7 +15,7 @@
 
 html {
     font-family: Arial, Helvetica, sans-serif;
-    background: radial-gradient(circle at top, #103726 0%, var(--bg-color) 40%, #020b09 100%);
+    background: radial-gradient(circle at top, #181037 0%, var(--bg-color) 40%, #020b09 100%);
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
@@ -110,7 +110,7 @@ main {
     padding: 10px 14px;
     list-style: none;
     border-radius: 14px;
-    background-color: rgba(8, 21, 17, 0.8);
+    background-color: rgba(8, 17, 21, 0.8);
 }
 
 .table_of_contents li {
@@ -133,15 +133,15 @@ main {
 .dropbtn {
     background: linear-gradient(135deg, #0d3b32, #1d5d48);
     color: white;
-    box-shadow: 0 8px 18px rgba(6, 40, 30, 0.3);
+    box-shadow: 0 8px 18px rgba(6, 27, 40, 0.3);
 }
 
 .dropdown-content {
     position: absolute;
     top: 100%;
     left: 0;
-    background: rgba(10, 19, 17, 0.96);
-    border: 1px solid rgba(136, 255, 220, 0.2);
+    background: rgba(10, 13, 19, 0.96);
+    border: 1px solid rgba(136, 205, 255, 0.2);
     min-width: 240px;
     padding: 12px;
     border-radius: 14px;
@@ -173,8 +173,8 @@ main {
     grid-template-columns: 1.3fr 1fr;
     gap: 20px;
     align-items: center;
-    background: linear-gradient(135deg, rgba(22, 77, 65, 0.9), rgba(8, 21, 17, 0.96));
-    border: 1px solid rgba(126, 255, 206, 0.2);
+    background: linear-gradient(135deg, rgba(22, 39, 77, 0.9), rgba(9, 8, 21, 0.96));
+    border: 1px solid rgba(126, 208, 255, 0.2);
     border-radius: 24px;
     box-shadow: 0 18px 34px rgba(0, 0, 0, 0.2);
     overflow: hidden;
@@ -212,7 +212,7 @@ main {
     position: relative;
     min-height: 260px;
     border-radius: 22px;
-    background: linear-gradient(160deg, rgba(28, 175, 141, 0.18), rgba(20, 52, 65, 0.2));
+    background: linear-gradient(160deg, rgba(35, 28, 175, 0.18), rgba(20, 23, 65, 0.2));
     overflow: hidden;
 }
 
@@ -238,7 +238,7 @@ main {
     padding: 24px 22px;
     border-radius: 18px;
     background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(126, 255, 206, 0.12);
+    border: 1px solid rgba(126, 152, 255, 0.12);
     min-height: 220px;
     display: flex;
     flex-direction: column;
