@@ -8,30 +8,35 @@ on:
 
 jobs:
   run-flask:
-    runs-on: ubuntu-24.04  # Avoid ubuntu-latest migration issues
+    runs-on: ubuntu-24.04
 
     steps:
-      # Step 1: Checkout repository
       - name: Checkout code
-        uses: actions/checkout@v4  # Node.js 24 compatible
+        uses: actions/checkout@v4
 
-      # Step 2: Set up Python
       - name: Set up Python
-        uses: actions/setup-python@v5  # Node.js 24 compatible
+        uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      # Step 3: Install dependencies
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install flask
-          # If you have requirements.txt:
-          # pip install -r requirements.txt
 
-      # Step 4: Run Flask app
-      - name: Run Flask
+      - name: Start Flask app
         run: |
           export FLASK_APP=app.py
           export FLASK_ENV=development
-          flask run --host=0.0.0.0 --port=5000
+          flask run --host=127.0.0.1 --port=5000 > flask.log 2>&1 &
+          echo $! > flask.pid
+          sleep 5
+
+      - name: Verify Flask app responds
+        run: curl --fail --silent --show-error http://127.0.0.1:5000
+
+      - name: Show Flask logs on failure
+        if: failure()
+        run: |
+          cat flask.log || true
+          if [ -f flask.pid ]; then kill $(cat flask.pid) || true; fi
