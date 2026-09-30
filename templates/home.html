@@ -113,6 +113,47 @@
         <script>
             const dropdownButton = document.querySelector('.dropbtn');
             const dropdownContent = document.getElementById('myDropdown');
+            const allLinks = document.querySelectorAll('.dropdown-content a, .pretitle a');
+
+            function updateDropdownLabel(targetId) {
+                const matchingLink = Array.from(allLinks).find(link => {
+                    const href = link.getAttribute('href');
+                    return href === targetId;
+                });
+
+                const label = matchingLink ? matchingLink.textContent.trim() : 'Dropdown';
+                dropdownButton.textContent = label.length > 24 ? label.slice(0, 24) + '...' : label;
+            }
+
+            function setActiveSection(targetId) {
+                const sectionId = targetId.startsWith('#') ? targetId : `#${targetId}`;
+
+                allLinks.forEach(link => {
+                    const isActive = link.getAttribute('href') === sectionId;
+                    link.classList.toggle('active', isActive);
+                });
+
+                updateDropdownLabel(sectionId);
+            }
+
+            const sections = [...document.querySelectorAll('main section, main [id]')]
+                .filter(element => element.id);
+
+            const observer = new IntersectionObserver((entries) => {
+                const visibleEntries = entries
+                    .filter(entry => entry.isIntersecting)
+                    .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+
+                if (visibleEntries.length > 0) {
+                    setActiveSection(`#${visibleEntries[0].target.id}`);
+                }
+            }, {
+                root: null,
+                threshold: [0.2, 0.45, 0.7],
+                rootMargin: '-10% 0px -45% 0px'
+            });
+
+            sections.forEach(section => observer.observe(section));
 
             dropdownButton.addEventListener('click', function () {
                 const isOpen = dropdownContent.classList.contains('show');
@@ -126,6 +167,8 @@
                     dropdownButton.setAttribute('aria-expanded', 'false');
                 }
             });
+
+            setActiveSection('#home');
         </script>
     </body>
 </html>

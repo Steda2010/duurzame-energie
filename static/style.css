@@ -166,6 +166,16 @@ main {
     list-style: none;
 }
 
+.dropdown-content a.active,
+.pretitle a.active {
+    color: var(--green);
+    font-weight: 700;
+    background: rgba(27, 254, 174, 0.08);
+    border-radius: 8px;
+    padding: 4px 8px;
+    display: inline-block;
+}
+
 .hero {
     margin: 25px;
     padding: 30px 24px;
