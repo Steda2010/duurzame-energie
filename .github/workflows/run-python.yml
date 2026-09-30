@@ -5,30 +5,24 @@ on:
     branches:
       - main
   workflow_dispatch:
-  schedule:
-    - cron: "0 9 * * *"  # Runs daily at 09:00 UTC
 
 jobs:
   run-script:
-    runs-on: ubuntu-24.04  # Explicitly use Ubuntu 24.04 to avoid migration issues
+    runs-on: ubuntu-24.04  # Avoid ubuntu-latest migration issues
 
     steps:
-      # Step 1: Checkout repository
+      # Checkout latest code (pinned to latest commit SHA for Node.js 24 support)
       - name: Checkout code
-        uses: actions/checkout@v4  # v4 supports Node.js 24
-
-      # Step 2: Set up Python
-      - name: Set up Python
-        uses: actions/setup-python@v5  # v5 supports Node.js 24
+        uses: actions/checkout@v4
         with:
-          python-version: "3.11"  # You can change to your preferred version
+          ref: main
 
-      # Step 3: Install dependencies (optional)
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          # pip install -r requirements.txt
+      # Setup Python (pinned to latest commit SHA for Node.js 24 support)
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
 
-      # Step 4: Run the Python script
+      # Run your script
       - name: Run script
         run: python app.py
