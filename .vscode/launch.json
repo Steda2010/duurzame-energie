@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "chrome",
+            "type": "Edge",
             "request": "launch",
             "name": "Open home.html",
             "file": "c:\\Users\\Daniël\\.vscode\\duurszame energie\\home.html"
