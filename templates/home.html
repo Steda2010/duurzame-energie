@@ -115,14 +115,19 @@
             const dropdownContent = document.getElementById('myDropdown');
             const allLinks = document.querySelectorAll('.dropdown-content a, .pretitle a');
 
+            function shortLabel(text) {
+                const cleanText = text.replace(/\s+/g, ' ').trim();
+                return cleanText.length > 22 ? cleanText.slice(0, 22) + '...' : cleanText;
+            }
+
             function updateDropdownLabel(targetId) {
                 const matchingLink = Array.from(allLinks).find(link => {
                     const href = link.getAttribute('href');
                     return href === targetId;
                 });
 
-                const label = matchingLink ? matchingLink.textContent.trim() : 'Dropdown';
-                dropdownButton.textContent = label.length > 24 ? label.slice(0, 24) + '...' : label;
+                const label = matchingLink ? matchingLink.textContent.trim() : 'Home';
+                dropdownButton.textContent = shortLabel(label);
             }
 
             function setActiveSection(targetId) {
@@ -136,8 +141,8 @@
                 updateDropdownLabel(sectionId);
             }
 
-            const sections = [...document.querySelectorAll('main section, main [id]')]
-                .filter(element => element.id);
+            const sections = [...document.querySelectorAll('main [id]')]
+                .filter(element => element.id && element.id !== '');
 
             const observer = new IntersectionObserver((entries) => {
                 const visibleEntries = entries
@@ -145,12 +150,13 @@
                     .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
 
                 if (visibleEntries.length > 0) {
-                    setActiveSection(`#${visibleEntries[0].target.id}`);
+                    const activeId = `#${visibleEntries[0].target.id}`;
+                    setActiveSection(activeId);
                 }
             }, {
                 root: null,
                 threshold: [0.2, 0.45, 0.7],
-                rootMargin: '-10% 0px -45% 0px'
+                rootMargin: '-8% 0px -45% 0px'
             });
 
             sections.forEach(section => observer.observe(section));
