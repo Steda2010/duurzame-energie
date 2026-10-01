@@ -242,7 +242,7 @@ main {
     padding: 0;
     margin: 25px;
 }
-
+/*
 .energy li {
     margin: 20px 0;
     padding: 24px 22px;
@@ -257,7 +257,7 @@ main {
     background-position: center;
     box-shadow: 0 16px 30px rgba(0, 0, 0, 0.18);
 }
-
+*/
 .energy li h2,
 .energy li p {
     background: rgba(0, 0, 0, 0.38);
