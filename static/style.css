@@ -253,7 +253,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    /*background-size: cover;*/
+    background-size: cover;
     background-position: center;
     box-shadow: 0 16px 30px rgba(0, 0, 0, 0.18);
 }
@@ -263,7 +263,7 @@ main {
     background: rgba(0, 0, 0, 0.38);
     padding: 8px 12px;
     border-radius: 10px;
-    backdrop-filter: blur(2px);
+    /*backdrop-filter: blur(2px);*/
     width: fit-content;
     max-width: 100%;
 }
