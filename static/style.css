@@ -94,8 +94,8 @@ main {
     transform: translateY(-1px);
 }
 
-.pretitle,
-.information {
+.pretitle/*,
+.information*/ {
     margin: 25px;
     padding: 22px 20px;
     color: white;
@@ -263,7 +263,7 @@ main {
     background: rgba(0, 0, 0, 0.38);
     padding: 8px 12px;
     border-radius: 10px;
-    /*backdrop-filter: blur(2px);*/
+    backdrop-filter: blur(2px);
     width: fit-content;
     max-width: 100%;
 }
