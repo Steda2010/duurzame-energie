@@ -50,3 +50,8 @@ searchInput.addEventListener('input', () => {
     const results = search(query);
     displayResults(results);
 });
+
+clearBtn.addEventListener('click', function() {
+  searchInput.value = "";
+  resultsContainer.innerHTML = '';
+});
