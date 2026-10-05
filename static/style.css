@@ -251,7 +251,7 @@ main {
     border: 1px solid rgba(126, 152, 255, 0.12);
     min-height: 220px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: flex-end;
     background-size: cover;
     background-position: center;
