@@ -58,6 +58,7 @@ main {
     display: flex;
     align-items: center;
     gap: 8px;
+    flex-direction: column;
 }
 
 .search-container input[type="search"] {
