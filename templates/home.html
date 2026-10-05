@@ -31,19 +31,14 @@
             </div>
 
             <div class="search-container">
-                <form id="zoekformulier">
-                    <label for="zoekveld">Zoek een sectie:</label>
-                    <input 
-                        type="search"
-                        id="zoekveld"
-                        name="zoekveld" 
-                        autocomplete="off"
-                        placeholder="Search.."
-                        required
-                    >
-                    <button type="submit">search</button>
-                </form>
+                <input 
+                    type="text" 
+                    id="search-input" 
+                    placeholder="Search..."
+                >
+                <div id="results"></div>
             </div>
+            <script src="search.js"></script>
         </header>
 
         <main>
