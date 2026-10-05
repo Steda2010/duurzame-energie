@@ -12,7 +12,7 @@ const items = [
 ];
 
 // Get references to the input and results elements
-const searchInput = document.getElementById('search-input');
+const searchInput = document.getElementById('zoekveld');
 const resultsContainer = document.getElementById('results');
 
 // Function to filter items based on the search query
