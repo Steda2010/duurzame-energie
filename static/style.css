@@ -7,6 +7,7 @@
     --text: #ecfff9;
     --muted: #c9efe2;
     --shadow: rgba(19, 156, 197, 0.35);
+    --photo_witdh: 1200px,
 }
 
 * {
@@ -290,7 +291,7 @@ main {
 
 #getijden {
     background-image: linear-gradient(rgba(0, 0, 0, 0.34), rgba(0, 0, 0, 0.45)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80');
-    width: 12px;
+    width: var(--photo_witdh);
 }
 
 h2 {
