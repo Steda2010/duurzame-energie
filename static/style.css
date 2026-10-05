@@ -241,6 +241,8 @@ main {
     list-style: none;
     padding: 0;
     margin: 25px;
+    display: flex;
+    flex-direction: column;
 }
 
 .energy li {
@@ -251,7 +253,7 @@ main {
     border: 1px solid rgba(126, 152, 255, 0.12);
     min-height: 220px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: flex-end;
     background-size: cover;
     background-position: center;
