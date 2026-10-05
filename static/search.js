@@ -1,15 +1,14 @@
 // Sample data to search through
 const items = [
-    { name: "Apple", target: "apple" },
-    { name: "Banana", target: "banana" },
-    { name: "Orange", target: "orange" },
-    { name: "Mango", target: "mango" },
-    { name: "Pineapple", target: "pineapple" },
-    { name: "Strawberry", target: "strawberry" },
-    { name: "Blueberry", target: "blueberry" },
-    { name: "Grape", target: "grape" },
-    { name: "Watermelon", target: "watermelon" },
-    { name: "Peach", target: "peach" }
+    { name: "Home", target: "home" },
+    { name: "Wat is duurzame energie", target: "wat-is-duurzame-energie" },
+    { name: "Energie soorten", target: "energie-soorten" },
+    { name: "Zonne", target: "zonne" },
+    { name: "Wind", target: "wind" },
+    { name: "Water", target: "water" },
+    { name: "Biomassa", target: "biomassa" },
+    { name: "Geothermisch", target: "geothermisch" },
+    { name: "Getijden", target: "getijden" }
 ];
 
 // Get references to the input and results elements
