@@ -7,7 +7,6 @@
     --text: #ecfff9;
     --muted: #c9efe2;
     --shadow: rgba(19, 156, 197, 0.35);
-    --photo-width: 1000px,
 }
 
 * {
@@ -257,6 +256,7 @@ main {
     background-size: cover;
     background-position: center;
     box-shadow: 0 16px 30px rgba(0, 0, 0, 0.18);
+    width: 600px;
 }
 
 .energy li h2,
@@ -290,8 +290,8 @@ main {
 }
 
 #getijden {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.34), rgba(0, 0, 0, 0.45)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop');
-    width: var(--photo-width);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.34), rgba(0, 0, 0, 0.45)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80');
+    width:600px;
 }
 
 h2 {
