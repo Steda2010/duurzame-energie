@@ -241,8 +241,6 @@ main {
     list-style: none;
     padding: 0;
     margin: 25px;
-    display: flex;
-    flex-direction: column;
 }
 
 .energy li {
