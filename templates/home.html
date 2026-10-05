@@ -31,14 +31,17 @@
             </div>
 
             <div class="search-container">
-                <div class="form">
-                <input 
-                    type="search" 
-                    id="search-input" 
-                    placeholder="Search..."
-                >
+                <form id="zoekformulier">
+                    <input 
+                        type="search"
+                        is="zoekveld"
+                        name="zoekveld" 
+                        autocomplete="off"
+                        placeholder="Search.."
+                        required
+                    >
                 <div id="results"></div>
-                </div>
+                </form>
             </div>
             <script src="{{ url_for('static', filename='search.js') }}"></script>
         </header>
