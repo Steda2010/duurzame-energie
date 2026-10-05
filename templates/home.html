@@ -175,6 +175,23 @@
             });
 
             setActiveSection('#home');
+
+            const zoekformulier = document.getElementById('zoekformulier');
+
+            zoekformulier.addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                const zoekterm = document.getElementById('zoekveld').value.toLowerCase();
+
+                const secties = document.querySelectorAll('main [id]');
+
+                for (const sectie of secties) {
+                    if (sectie.textContent.toLowerCase().includes(zoekterm)) {
+                        sectie.scrollIntoView({ behavior: 'smooth' });
+                        break;
+                    }
+                }
+            });
         </script>
     </body>
 </html>
