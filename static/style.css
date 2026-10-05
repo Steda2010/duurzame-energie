@@ -7,7 +7,7 @@
     --text: #ecfff9;
     --muted: #c9efe2;
     --shadow: rgba(19, 156, 197, 0.35);
-    --photo_witdh: 1000px,
+    --photo-width: 1000px,
 }
 
 * {
