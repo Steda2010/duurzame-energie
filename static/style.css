@@ -58,9 +58,14 @@ main {
     display: flex;
     align-items: center;
     gap: 8px;
+    position: relative;
 }
 #results {
-    margin: 25px;
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    z-index: 20;
+    margin: 0;
     padding: 22px 20px;
     color: white;
     background: var(--panel-color);
