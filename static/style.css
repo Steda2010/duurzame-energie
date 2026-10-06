@@ -330,3 +330,9 @@ h2 {
         width: auto;
     }
 }
+
+#results {
+    border: 1px solid rgba(126, 218, 255, 0.24);
+    background: rgba(3, 30, 52, 0.82);
+    width: fit-content;
+}
