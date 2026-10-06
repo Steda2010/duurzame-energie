@@ -72,6 +72,8 @@ main {
     border: 1px solid var(--panel-border);
     border-radius: 18px;
     box-shadow: 0 14px 32px rgba(0, 0, 0, 0.18);
+    color: var(--text);
+    text-decoration: none;
 }
 .search-container input[type="search"] {
     padding: 9px 12px;
@@ -79,6 +81,11 @@ main {
     border-radius: 999px;
     background: rgba(255, 255, 255, 0.12);
     color: white;
+}
+
+.search-container input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
 }
 
 .search-container input[type="search"]::placeholder {
