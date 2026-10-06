@@ -14,6 +14,7 @@ const items = [
 // Get references to the input and results elements
 const searchInput = document.getElementById('zoekveld');
 const resultsContainer = document.getElementById('results');
+resultsContainer.hidden = true;
 
 // Function to filter items based on the search query
 function search(query) {
@@ -46,11 +47,20 @@ function displayResults(results) {
 // Event listener for the search input
 searchInput.addEventListener('input', () => {
     const query = searchInput.value.trim();
+
+    if (!query) {
+        resultsContainer.innerHTML = '';
+                resultsContainer.hidden = true;
+        return;
+    }
+
     const results = search(query);
+        resultsContainer.hidden = false;
     displayResults(results);
 });
 
 clearBtn.addEventListener('click', function() {
   searchInput.value = "";
   resultsContainer.innerHTML = '';
+    resultsContainer.hidden = true;
 });
