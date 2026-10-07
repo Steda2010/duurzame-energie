@@ -59,6 +59,39 @@ searchInput.addEventListener('input', () => {
     displayResults(results);
 });
 
+let currentFocus = -1;
+
+searchInput.addEventListener('keydown', function(e) {
+  const visibleItems = Array.from(items).filter(
+    item => item.style.display !== "none"
+  );
+
+  if (e.key === "ArrowDown") {
+    currentFocus = (currentFocus + 1) % visibleItems.length;
+    setActive(visibleItems);
+    e.preventDefault();
+  } else if (e.key === "ArrowUp") {
+    currentFocus = (currentFocus - 1 + visibleItems.length) % visibleItems.length;
+    setActive(visibleItems);
+    e.preventDefault();
+  } else if (e.key === "Enter") {
+    if (currentFocus > -1 && visibleItems[currentFocus]) {
+      alert("You selected: " + visibleItems[currentFocus].textContent);
+      searchInput.value = visibleItems[currentFocus].textContent;
+      searchInput.dispatchEvent(new Event('keyup'));
+      currentFocus = -1;
+    }
+    e.preventDefault();
+  }
+});
+
+function setActive(list) {
+  list.forEach(item => item.classList.remove("active"));
+  if (currentFocus >= 0 && list[currentFocus]) {
+    list[currentFocus].classList.add("active");
+  }
+}
+
 clearBtn.addEventListener('click', function() {
   searchInput.value = "";
   resultsContainer.innerHTML = '';

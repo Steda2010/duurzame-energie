@@ -365,3 +365,8 @@ h2 {
     background: rgba(3, 30, 52, 0.82);
     width: fit-content;
 }
+
+#itemList li.active {
+  background: #0077ff;
+  color: white;
+}
