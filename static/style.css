@@ -376,6 +376,6 @@ h2 {
     padding: 8px 12px;
     border-radius: 10px;
     border: 1px solid var(--panel-border);
-    box-shadow: 0 8px 18px var(--shadow);
+    box-shadow: 0 8px 18px black;
     margin: 20px 0;
 }
