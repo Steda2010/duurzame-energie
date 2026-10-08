@@ -4,11 +4,11 @@ const items = [
     { name: "Wat is duurzame energie", target: "wat-is-duurzame-energie" },
     { name: "Energie soorten", target: "energie-soorten" },
     { name: "Zonne energie", target: "zonne" },
-    { name: "Wind energie", target: "windenergie" },
-    { name: "Water energie", target: "waterenergie" },
+    { name: "Wind energie", target: "wind" },
+    { name: "Water energie", target: "water" },
     { name: "Biomassa energie", target: "biomassa" },
-    { name: "Geothermische energie", target: "geothermische-energie" },
-    { name: "Getijden energie", target: "getijdenenergie" }
+    { name: "Geothermische energie", target: "geothermisch" },
+    { name: "Getijden energie", target: "getijden" }
 ];
 
 // Get references to the input and results elements
