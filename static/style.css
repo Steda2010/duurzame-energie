@@ -373,7 +373,7 @@ h2 {
 .text-box {
     background-color: var(--panel-color);
     width: 100%;
-    padding: 8px 12px;
+    margin: 25px;
     border-radius: 10px;
     border: 1px solid var(--panel-border);
     box-shadow: 0 8px 18px black;
