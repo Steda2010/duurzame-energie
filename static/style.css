@@ -374,8 +374,8 @@ h2 {
     background-color: var(--panel-color);
     width: 100%;
     margin: 25px;
+    padding: 30px 24px;
     border-radius: 10px;
     border: 1px solid var(--panel-border);
     box-shadow: 0 8px 18px black;
-    margin: 20px 0;
 }
