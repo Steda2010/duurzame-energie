@@ -370,3 +370,9 @@ h2 {
   background: #0077ff;
   color: white;
 }
+.text-box {
+    background-color: rgba(8, 17, 21, 0.8);
+    width: 100%;
+    padding: 8px 12px;
+    border-radius: 10px;
+}
