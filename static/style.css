@@ -371,8 +371,10 @@ h2 {
   color: white;
 }
 .text-box {
-    background-color: rgba(8, 17, 21, 0.8);
+    background-color: var(--panel-color);
     width: 100%;
     padding: 8px 12px;
     border-radius: 10px;
+    border: 1px solid var(--panel-border);
+    box-shadow: 0 8px 18px var(--shadow);
 }
