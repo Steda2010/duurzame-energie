@@ -330,8 +330,8 @@ main {
 }
 
 #idk-yet {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.34), rgba(0, 0, 0, 0.45)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80');
-}
+    background-image: linear-gradient(rgba(7, 48, 79, 0.34), rgba(13, 6, 59, 0.45));
+} 
 
 h2 {
     margin-top: 0;
