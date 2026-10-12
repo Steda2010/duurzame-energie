@@ -329,6 +329,10 @@ main {
     background-image: linear-gradient(rgba(0, 0, 0, 0.34), rgba(0, 0, 0, 0.45)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80');
 }
 
+#idk-yet {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.34), rgba(0, 0, 0, 0.45)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80');
+}
+
 h2 {
     margin-top: 0;
 }
