@@ -337,6 +337,10 @@ main {
 h2 {
     margin-top: 0;
 }
+#less-space {
+    margin: 0 25px 20px;
+    line-height: 1.6;
+}
 
 @media screen and (max-width: 760px) {
     .title-box {
