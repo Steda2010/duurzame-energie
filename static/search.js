@@ -2,6 +2,8 @@
 const items = [
     { name: "Home", target: "home" },
     { name: "Wat is duurzame energie", target: "wat-is-duurzame-energie" },
+    { name: "wat is duurzame energie", target: "wat-is-duurzame-energie2" },
+    { name: "Waarom-is-duurzame-energie-belangrijk", target: "waarom-is-duurzame-energie-belangrijk" },
     { name: "Energie soorten", target: "energie-soorten" },
     { name: "Zonne energie", target: "zonne" },
     { name: "Wind energie", target: "wind" },
