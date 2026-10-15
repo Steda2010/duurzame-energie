@@ -217,5 +217,34 @@
                 }
             });
         </script>
+
+        <script>
+                    function createMenu(items) {
+            const ul = document.createElement("ul");
+
+            items.forEach(item => {
+                if (item && typeof item.name === "string" && typeof item.target === "string") {
+                    const li = document.createElement("li");
+                    const link = document.createElement("a");
+                    link.textContent = item.name;
+                    link.href = `#${item.target}`;
+                    li.appendChild(link);
+
+                    // If there are children, recursively create a sublist
+                    if (Array.isArray(item.children) && item.children.length > 0) {
+                        li.appendChild(createMenu(item.children));
+                    }
+
+                    ul.appendChild(li);
+                }
+            });
+
+            return ul;
+        }
+
+        // Render menu into the page
+        const menuList = document.getElementById("white");
+        menuList.appendChild(createMenu(items));
+        </script>
     </body>
 </html>
