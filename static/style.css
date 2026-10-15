@@ -399,3 +399,42 @@ h2 {
     border: 1px solid var(--panel-border);
     box-shadow: 0 8px 18px black;
 }
+
+.containergrid {
+  display: grid;
+  grid-template-areas:
+    "headergrid headergrid headergrid headergrid headergrid"
+    "emailgrid telenumbergrid instagramgrid facebookgrid discordgrid"
+    "footergrid footergrid footergrid footergrid footergrid";
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 3px;
+  background-color: rgb(0, 0, 0);
+  padding: 5px;
+}
+.containergrid div {
+  background-color: white;
+  padding: 10px;
+}
+.containergrid div.headergrid {
+  grid-area: headergrid;
+  text-align: center;
+}
+.containergrid div.emailgrid {
+  grid-area: emailgrid;
+}
+.containergrid div.telenumbergrid {
+  grid-area: telenumbergrid;
+}
+.containergrid div.instagramgrid {
+  grid-area: instagramgrid;
+}
+.containergrid div.facebookgrid {
+  grid-area: facebookgrid;
+}
+.containergrid div.discordgrid {
+  grid-area: discordgrid;
+}
+.containergrid div.footergrid {
+  grid-area: footergrid;
+  text-align: center;  
+}
