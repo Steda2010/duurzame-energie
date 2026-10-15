@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="nl">
     <head>
         <link rel="icon" type="image/png" href="{{ url_for('static', filename='energie-logo.png') }}">
@@ -44,7 +44,7 @@
             </div>
 
             <div class="pretitle">
-                <ul class="table_of_contents" id="white">
+                <ul class="table_of_contents" id="inhoudsopgave">
                 </ul>
             </div>
 
@@ -190,7 +190,7 @@
         </script>
 
         <script>
-                    function createMenu(items) {
+            function createMenu(items) {
             const ul = document.createElement("ul");
 
             items.forEach(item => {
@@ -216,6 +216,8 @@
         // Render menu into the page
         const menuList = document.getElementById("white");
         menuList.appendChild(createMenu(items));
+        const menuList2 = document.getElementById("inhoudsopgave");
+        menuList2.appendChild(createMenu(items));
         </script>
     </body>
 </html>
