@@ -240,19 +240,20 @@ main {
     color: var(--green);
     font-weight: bold;
 }
+.title-box {
+    .title {
+      margin: 0 0 12px;
+      font-size: clamp(2.2rem, 4vw, 4rem);
+      line-height: 1.1;
+      color: white;
+    }
 
-.title-box .title {
-    margin: 0 0 12px;
-    font-size: clamp(2.2rem, 4vw, 4rem);
-    line-height: 1.1;
-    color: white;
-}
-
-.title-box .text {
-    margin: 0;
-    max-width: 640px;
-    line-height: 1.6;
-    color: var(--muted);
+    .text {
+      margin: 0;
+      max-width: 640px;
+      line-height: 1.6;
+      color: var(--muted);
+    }
 }
 
 .title-box-visual {
@@ -434,28 +435,4 @@ h2 {
       text-align: center;  
     }
 }
-/* }
-.containergrid div.headergrid {
-  grid-area: headergrid;
-  text-align: center;
-}
-.containergrid div.emailgrid {
-  grid-area: emailgrid;
-}
-.containergrid div.telenumbergrid {
-  grid-area: telenumbergrid;
-}
-.containergrid div.instagramgrid {
-  grid-area: instagramgrid;
-}
-.containergrid div.facebookgrid {
-  grid-area: facebookgrid;
-}
-.containergrid div.discordgrid {
-  grid-area: discordgrid;
-}
-.containergrid div.footergrid {
-  grid-area: footergrid;
-  text-align: center;  
-}
-*/
+
