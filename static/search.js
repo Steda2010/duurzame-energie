@@ -1,5 +1,5 @@
 // Sample data to search through
-const items = [
+const content = [
     { name: "Home", target: "home" },
     { 
         name: "Wat is duurzame energie", 

@@ -184,20 +184,20 @@
         </script>
 
         <script>
-            function createMenu(items) {
+            function createMenu(content) {
             const ul = document.createElement("ul");
 
-            items.forEach(item => {
-                if (item && typeof item.name === "string" && typeof item.target === "string") {
+            items.forEach(content => {
+                if (content && typeof content.name === "string" && typeof content.target === "string") {
                     const li = document.createElement("li");
                     const link = document.createElement("a");
-                    link.textContent = item.name;
-                    link.href = `#${item.target}`;
+                    link.textContent = content.name;
+                    link.href = `#${content.target}`;
                     li.appendChild(link);
 
                     // If there are children, recursively create a sublist
-                    if (Array.isArray(item.children) && item.children.length > 0) {
-                        li.appendChild(createMenu(item.children));
+                    if (Array.isArray(content.children) && content.children.length > 0) {
+                        li.appendChild(createMenu(content.children));
                     }
 
                     ul.appendChild(li);
@@ -209,7 +209,7 @@
 
         // Render menu into the page
         const menuList2 = document.getElementById("inhoudsopgave");
-        menuList2.appendChild(createMenu(items));
+        menuList2.appendChild(createMenu(content));
         </script>
     </body>
 </html>
