@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="nl">
+// links and stuff
     <head>
         <link rel="icon" type="image/png" href="{{ url_for('static', filename='energie-logo.png') }}">
         <meta charset="UTF-8">
@@ -8,6 +9,7 @@
         <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     </head>
     <body>
+// header
         <header class="header">
             <div class="dropdown" id="dropdownContainer">
                 <button class="dropbtn" aria-expanded="false" aria-controls="myDropdown" type="button">Dropdown</button>
@@ -16,7 +18,7 @@
                     </ul>
                 </div>
             </div>
-
+            // search bar
             <div class="search-container">
                 <form id="zoekformulier">
                     <input 
@@ -33,7 +35,7 @@
             </div>
             <script src="{{ url_for('static', filename='search.js') }}"></script>
         </header>
-
+//title
         <main>
             <div id="home" class="title-box">
                 <div class="title-box2">
@@ -42,6 +44,7 @@
                     <p class="text">Zonne-, wind- en waterkracht helpen ons om energie te maken zonder de planeet te beschadigen.</p>
                 </div>
             </div>
+// area wfor what is duurzame energie            
             <section id="wat-is-duurzame-energie" class="information">
                 <h1 class="title">Wat is duurzame energie?</h1>
                 <ul class="energy">
@@ -55,7 +58,7 @@
                     </li>
                 </ul>
             </section>
-
+// area for energy types
             <section class="information" id="energie-soorten">
                 <h1 class="title">Energie soorten</h1>
                 <p class="text">Energie kan op verschillende manieren worden opgewekt. Hieronder vind je een overzicht van de meest voorkomende soorten duurzame energie.</p>
@@ -86,6 +89,7 @@
                     </li>
                 </ul>
             </section>
+// about us 
             <section id="contact">
                 <div class="containergrid">
                     <div class="headergrid"><h2>How to contact us</h2></div>
@@ -98,7 +102,7 @@
                 </div>
             </section>
         </main>
-
+// script that can be in the seperate file
         <script>
             const dropdownButton = document.querySelector('.dropbtn');
             const dropdownContent = document.getElementById('myDropdown');
