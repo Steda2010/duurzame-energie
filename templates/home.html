@@ -187,7 +187,7 @@
             function createMenu(content) {
             const ul = document.createElement("ul");
 
-            items.forEach(content => {
+            content.forEach(content => {
                 if (content && typeof content.name === "string" && typeof content.target === "string") {
                     const li = document.createElement("li");
                     const link = document.createElement("a");
