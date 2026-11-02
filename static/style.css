@@ -408,7 +408,8 @@ h2 {
 .containergrid div {
   background-color: rgb(73, 73, 73);
   padding: 10px;
-  
+} 
+.containergrid {  
     div.headergrid {
       grid-area: headergrid;
       text-align: center;
