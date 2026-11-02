@@ -12,7 +12,7 @@
             <div class="dropdown" id="dropdownContainer">
                 <button class="dropbtn" aria-expanded="false" aria-controls="myDropdown" type="button">Dropdown</button>
                 <div id="myDropdown" class="dropdown-content">
-                    <ul class="table_of_contents" id="white">
+                    <ul class="table_of_contents" id="inhoudsopgave">
                     </ul>
                 </div>
             </div>
@@ -42,12 +42,6 @@
                     <p class="text">Zonne-, wind- en waterkracht helpen ons om energie te maken zonder de planeet te beschadigen.</p>
                 </div>
             </div>
-
-            <div class="pretitle">
-                <ul class="table_of_contents" id="inhoudsopgave">
-                </ul>
-            </div>
-
             <section id="wat-is-duurzame-energie" class="information">
                 <h1 class="title">Wat is duurzame energie?</h1>
                 <ul class="energy">
@@ -214,8 +208,6 @@
         }
 
         // Render menu into the page
-        const menuList = document.getElementById("white");
-        menuList.appendChild(createMenu(items));
         const menuList2 = document.getElementById("inhoudsopgave");
         menuList2.appendChild(createMenu(items));
         </script>
