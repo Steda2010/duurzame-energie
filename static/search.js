@@ -23,6 +23,19 @@ const content = [
     }
 ];
 
+const items = [
+    { name: "Home", target: "home" },
+    { name: "Wat is duurzame energie", target: "wat-is-duurzame-energie" },
+    { name: "Waarom is duurzame energie belangrijk", target: "waarom-is-duurzame-energie-belangrijk" },
+    { name: "Energie soorten", target: "energie-soorten" },
+    { name: "Zonne energie", target: "zonne" },
+    { name: "Wind energie", target: "wind" },
+    { name: "Water energie", target: "water" },
+    { name: "Biomassa energie", target: "biomassa" },
+    { name: "Geothermische energie", target: "geothermisch" },
+    { name: "Getijden energie", target: "getijden" }
+]
+
 // Get references to the input and results elements
 const searchInput = document.getElementById('zoekveld');
 const resultsContainer = document.getElementById('results');
