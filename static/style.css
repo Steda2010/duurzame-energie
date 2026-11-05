@@ -61,10 +61,6 @@ main {
     position: relative;
 }
 
-.search-container input{
-    border: black 3px solid;
-}
-
 #results {
     position: absolute;
     top: calc(100% + 8px);
